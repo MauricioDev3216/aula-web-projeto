@@ -10,6 +10,10 @@ estado da aplicação.
 2. Abra o `index.html` no navegador
 ## Melhorias futuras
 - [ ] Melhorar o design
-- [ ] adicionar som de alarme ao fim do tempo
 - [ ] botão modo noturno
 - [ ] configuração da duração do time
+## Explicação de set e clear Internal
+setInterval chama repetidamente uma função específica em intervalos de tempo definidos.
+clearInterval é usada para parar a execução repetida estabelecida por setInterval.
+## gif
+![gif do pomodoro funcionando](<2025-05-23 14-13-58-1.gif>)

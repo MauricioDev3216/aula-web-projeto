@@ -2,6 +2,9 @@ const display = document.getElementById('display');
 const startBtn = document.getElementById('startBtn');
 const stopBtn = document.getElementById('stopBtn');
 const resetBtn = document.getElementById('resetBtn');
+const pCurtabtn = document.getElementById('pCurtabtn');
+const pLongabtn = document.getElementById('pLongabtn');
+const audio = new Audio('alarme.mp3')
 
 let timer = null;
 let time = 25*60;
@@ -18,6 +21,7 @@ const startTime = () => {
             time--;
             updateDisplay();
             if(time==0){
+                audio.play()
                 alert("cabo teu tempo rapaz")
                 stopTimer()
             }
@@ -34,8 +38,22 @@ const resetTimer = () => {
     time = 25 * 60
     updateDisplay()
 }
+const pausaCurta = () => {
+    stopTimer()
+    time = 5 * 60
+    updateDisplay()
+    startTime()
+}
+const pausaLonga = () => {
+    stopTimer()
+    time = 15 * 60
+    updateDisplay()
+    startTime()
+}
 startBtn.addEventListener('click', startTime)
 stopBtn.addEventListener('click', stopTimer)
 resetBtn.addEventListener('click', resetTimer)
+pCurtaBtn.addEventListener('click', pausaCurta)
+pLongaBtn.addEventListener('click', pausaLonga)
 
 window.onload =updateDisplay();
