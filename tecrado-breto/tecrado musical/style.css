@@ -4,10 +4,12 @@ body {
   text-align: center;
   font-family: sans-serif;
   padding: 40px;
+  margin: 0;
 }
 
 .teclado {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   margin-bottom: 30px;
@@ -22,6 +24,7 @@ body {
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.1s;
+  min-width: 60px;
 }
 
 .tecla:active,
@@ -30,6 +33,7 @@ body {
   color: #000;
   transform: scale(0.95);
 }
+
 #toggleTheme {
   position: fixed;
   top: 20px;
@@ -48,6 +52,7 @@ body {
   background: #666;
 }
 
+/* Light mode */
 body.light-mode {
   background: #fff;
   color: #000;
@@ -67,4 +72,24 @@ body.light-mode .tecla.pressionada {
 body.light-mode #toggleTheme {
   background: #ccc;
   color: #000;
+}
+
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  .tecla {
+    padding: 16px;
+    font-size: 14px;
+    min-width: 50px;
+  }
+
+  #toggleTheme {
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
 }

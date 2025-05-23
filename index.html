@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meus Projetos</title>
   <style>
     body {
@@ -9,15 +10,26 @@
       color: #ffffff;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 40px;
+      padding: 20px;
+      margin: 0;
     }
+
     h1 {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
+      font-size: 2em;
     }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
     button {
-      display: block;
-      margin: 15px auto;
-      padding: 12px 24px;
+      width: 100%;
+      padding: 12px;
       background-color: #00aaff;
       color: white;
       border: none;
@@ -26,18 +38,36 @@
       font-size: 16px;
       transition: background-color 0.3s;
     }
+
     button:hover {
       background-color: #0088cc;
+    }
+
+  
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 2.5em;
+      }
+
+      .button-container {
+        max-width: 500px;
+      }
+
+      button {
+        font-size: 18px;
+        padding: 14px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Meus Projetos</h1>
+  <h1> Projetos</h1>
 
-  <button onclick="location.href='lapamda/index.html'">Abrir Lampada</button>
-  <button onclick="location.href='pmodro/index.html'">Abrir Pomodro</button>
-  <button onclick="location.href='porco banco cresce mauricio/index.html'">O Cofre</button>
-  <button onclick="location.href='tecrado-breto/tecrado musical/index.html'">Abrir Teclado</button>
-
+  <div class="button-container">
+    <button onclick="location.href='lapamda/index.html'">Abrir Lâmpada</button>
+    <button onclick="location.href='pmodro/index.html'">Abrir Pomodoro</button>
+    <button onclick="location.href='porco banco cresce mauricio/index.html'">O Cofre</button>
+    <button onclick="location.href='tecrado-breto/tecrado musical/index.html'">Abrir Teclado</button>
+  </div>
 </body>
 </html>
